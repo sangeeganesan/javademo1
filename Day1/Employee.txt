@@ -1,0 +1,49 @@
+public class Employee {
+	
+	private int empid1;
+	private String name1;
+	private float salary1;
+	public int empid2;
+        private String name2;
+	private float salary2;
+	private String updname;
+	public String getUpdname() {
+		return updname;
+	}
+	public void Employee1(int empid1,String name1,float salary1) {
+		this.empid1=empid1;
+		this.name1=name1;
+		this.salary1=salary1;
+		
+		System.out.println("Enter emp no: " +empid1);
+		System.out.println("Enter name :" +name1);
+		System.out.println("Enter salary: "+salary1);
+	}
+	public void Employee2(int empid2,String name2,float salary2) {
+		this.empid2=empid2;
+		this.name2=name2;
+		this.salary2=salary2;
+		System.out.println("Enter emp no: " +empid2);
+		System.out.println("Enter name :" +name2);
+		System.out.println("Enter salary: "+salary2);
+	}
+	public void salarydiff() {
+		if(!(salary1<salary2)) {
+			System.out.println(name1  +"  " + "Employee1 gets the highest salary" );
+		}
+		else
+		{
+			System.out.println(name2 +" " +  "Employee2 gets the highest salary");
+		}
+	}
+	public void update(String updname) {
+		this.updname=updname;
+		
+		System.out.println("Employee no:" +empid1);
+		System.out.println("current name of employee:" +name1);
+		System.out.println("Enter name to update: " + name1+updname);
+		
+		
+	}
+	
+}

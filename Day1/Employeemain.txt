@@ -1,0 +1,11 @@
+public class Employees {
+
+	public static void main(String[] args) {
+			Employee emp=new Employee();
+			emp.Employee1(12,"Hari",25000);
+			emp.Employee2(13, "sangee",15000);
+			emp.salarydiff();
+			emp.update("ni");
+	}
+
+}

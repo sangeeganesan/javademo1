@@ -1,0 +1,43 @@
+package com.main;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		int num;
+		int reverse;
+		int sum=0;
+		int temp;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the number:");
+		num=scanner.nextInt();
+		String a=new String();
+		Scanner scanner1=new Scanner(System.in);
+		System.out.println("Enter the string:");
+		a=scanner1.nextLine();
+		StringTokenizer stringtoken=new StringTokenizer(a);
+		temp=num;
+		while(num>0)
+		{
+			reverse=num%10;
+			sum=(sum*10)+reverse;
+			num=num/10;
+		}
+		
+		if(temp==sum)
+		{
+			System.out.println("The given number is Palindrome");
+		}
+		else
+		{
+			System.out.println("The given number is not palindrome");
+		}
+		System.out.println("The words in the string are:");
+		while(stringtoken.hasMoreElements()) {
+			System.out.println("The token in the string are:"stringtoken.nextToken());
+		}
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.Day1lab;
+
+import java.util.Scanner;
+
+public class Swap {
+
+	public static void main(String[] args) {
+		int number1;
+		int number2;
+		int temp;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("The first number is:");
+		number1=scanner.nextInt();
+		System.out.println("The Second number is:");
+		number2=scanner.nextInt();
+		temp=number1;
+		number1=number2;
+		number2=temp;
+		System.out.println("The swapped numbers are" + number1 +" " +number2);		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.Day1lab;
+
+import java.util.Scanner;
+
+public class PrintAscii {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the character:");
+		char ch=scanner.next().charAt(0);
+		int ascii=ch;
+		System.out.println("Ascii value of character is:" +ascii);
+
+	}
+
+}

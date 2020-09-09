@@ -1,0 +1,16 @@
+package com.Day1lab;
+
+public class AllOperation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int number1=20;
+		int number2=4;
+		System.out.println("The addition of two numbers      :" +(number1+number2));
+		System.out.println("The subtraction of two numbers   :" +(number1-number2));
+		System.out.println("The multiplication of two numbers:" +(number1*number2));
+		System.out.println("The remainder of two numbers     :" +(number1%number2));		
+
+	}
+
+}

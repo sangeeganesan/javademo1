@@ -1,0 +1,54 @@
+package com.Day1lab;
+
+public class SumOfOdd {
+	
+	public static int CheckSum(int number) {
+		int sum=0;
+		int result;
+		int temp;
+		while(number>=1)
+		{
+			temp=number%10;
+			if(temp%2!=0) {
+				sum=sum+temp;			
+			}
+			number=number/10;
+		}
+		if(sum%2!=0) {
+			result=1;
+		}else {
+			result=-1;
+		}
+		return result;
+		
+	}
+}
+
+
+
+//main
+
+package com.Day1lab.main;
+
+import java.util.Scanner;
+
+import com.Day1lab.SumOfOdd;
+
+public class Sumofoddnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int number=scanner.nextInt();
+		int result1=SumOfOdd.CheckSum(number);
+		if(result1==1) {
+			System.out.println("sum of odd digits is odd");
+		}else
+		{
+			System.out.println("sum of odd digits is even");
+		}
+
+	}
+
+}

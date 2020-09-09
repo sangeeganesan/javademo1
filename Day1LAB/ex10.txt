@@ -1,0 +1,48 @@
+package com.Day1lab;
+
+import java.util.StringTokenizer;
+
+public class UserMainCode {
+	public static String getLargestWord(String str) {
+		String longword=" ";
+		StringTokenizer st=new StringTokenizer(str);
+		while(st.hasMoreTokens()) {
+			String current = st.nextToken();
+			if(current.length() > longword.length()) {
+			   longword=current;
+			}
+			
+		}
+		
+		return longword;	
+	}
+
+}
+
+
+//main
+
+package com.Day1lab.main;
+
+import java.util.Scanner;
+
+import com.Day1lab.UserMainCode;
+
+
+public class Largeword {
+
+
+	public static void main(String[] args) {
+	
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String str=scanner.nextLine();
+		String result=UserMainCode.getLargestWord(str);
+		System.out.println(result);
+		
+
+
+	}
+
+	
+}

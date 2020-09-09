@@ -1,0 +1,45 @@
+package com.Day1lab;
+
+public class UserMainCode {
+	public static int sumOfSquaresOfEvenDigits(int number) {
+		int sum=0;
+		int result;
+		int temp;
+		while(number>=1)
+		{
+			temp=number%10;
+			if(temp%2==0) {
+				sum=sum+temp*temp;			
+			}
+			number=number/10;
+		}
+				return sum;
+		
+	}
+
+}
+
+//main
+
+package com.Day1lab.main;
+
+import java.util.Scanner;
+
+import com.Day1lab.UserMainCode;
+
+
+public class Sumofeven {
+
+	public static void main(String[] args) {
+	
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int number=scanner.nextInt();
+		int result1=UserMainCode.sumOfSquaresOfEvenDigits(number);
+		System.out.println(result1);
+		
+
+
+	}
+
+}

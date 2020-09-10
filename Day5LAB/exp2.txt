@@ -1,0 +1,28 @@
+package com.day5;
+
+import java.util.Scanner;
+
+public class Error {
+
+	public static void main(String[] args) {
+		
+		int num1;
+		int num2;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the number1:");
+		num1=scanner.nextInt();
+		System.out.println("Enter the number2:");
+		num2=scanner.nextInt();
+		try{
+		int result=num1/num2;
+		System.out.println(result);
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		
+
+	}
+
+}

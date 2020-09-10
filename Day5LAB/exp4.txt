@@ -1,0 +1,46 @@
+package com.day5;
+
+public class CustomException {
+	
+	public void CustomException(String name,int age)throws Exception{
+		if(age<19) {
+			throw new Exception("InvalidAgeRange Custom Exception");
+		}else
+		{
+			System.out.println("Player name:" +name);
+			System.out.println("Player age:" +age);
+		}
+	}
+
+}
+
+
+//main
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day5.CustomException;
+
+public class Custom {
+
+	public static void main(String[] args) {
+		String name;
+		int age;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the name:");
+		name=scanner.nextLine();
+		System.out.println("Enter the age:");
+		age=scanner.nextInt();
+		CustomException CE=new CustomException();
+		
+		try {
+			CE.CustomException(name, age);
+		}catch(Exception e)
+		{
+		    System.out.println(e);	
+        }
+	}
+
+}

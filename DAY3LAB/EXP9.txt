@@ -1,0 +1,43 @@
+//.....Write a program to read a string and a character, and reverse the string and convert it in
+ a format such that each character is separated by the given character. Print the final string
+package com.day3lab;
+
+public class Usermaincode1 {
+	public static String getstring(String str) {
+		String reversed;
+		String rev=" ";
+		for(int i=str.length()-1;i>=0;i--)
+		{
+			reversed= rev+str.charAt(i);
+			rev=reversed+"-";
+			
+		}
+		String st=rev.substring(0,rev.length()-1);
+		
+		return st;
+		
+		
+	}
+
+}
+
+
+//main
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day3lab.Usermaincode1;
+
+public class formatstring {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the String");
+		String str=scanner.nextLine();
+		String result=Usermaincode1.getstring(str);
+		System.out.println(result);
+	}
+
+}

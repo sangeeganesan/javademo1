@@ -1,0 +1,45 @@
+package com.day3lab;
+
+public class UserMainCode {
+	public static String getstring(String str) {
+		
+		    if(str.substring(0,1).equals("k") && str.substring(1,2).equals("b"))
+			{
+				System.out.println(str.substring(0, 1)+ str.substring(1,2) +str.subSequence(2,str.length()));
+			}else if(str.substring(0,1).equals("k") && !str.substring(1,2).equals("b"))
+			{
+				System.out.println(str.substring(0, 1)+str.subSequence(2,str.length()));
+			}else if(!str.substring(0,1).equals("k") && str.substring(1,2).equals("b"))
+			{
+				System.out.println(str.substring(1,2)+ str.substring(2,str.length()));
+			}else
+			{
+				System.out.println(str.subSequence(2,str.length()));
+			}
+			return " ";
+		
+	}
+
+}
+
+
+//main
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day3lab.UserMainCode;
+
+public class substringchange {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the String");
+		String str=scanner.nextLine();
+		String result=UserMainCode.getstring(str);
+		System.out.println(result);
+
+	}
+
+}

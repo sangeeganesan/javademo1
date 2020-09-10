@@ -1,0 +1,16 @@
+package com.day3lab;
+
+import java.util.Scanner;
+
+public class Substringdemo {
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String str=scanner.nextLine();
+		System.out.println("Enter the range of substring:");
+		int num1=scanner.nextInt();
+		int num2=scanner.nextInt();
+		System.out.println("The substring is:" + str.substring(num1, num2));
+	}
+
+}

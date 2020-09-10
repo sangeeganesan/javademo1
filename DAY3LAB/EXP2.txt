@@ -1,0 +1,17 @@
+package com.day3lab;
+
+import java.util.Scanner;
+
+public class Charchange {
+	public static void main(String[] args) {
+		
+				String str;
+				Scanner scanner=new Scanner(System.in);
+				System.out.println("Enter the string:");
+				str=scanner.nextLine();
+				String str1=str.replace("d","h");
+				System.out.println(str1);
+    }
+
+
+}

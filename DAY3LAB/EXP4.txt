@@ -1,0 +1,38 @@
+package com.day3lab;
+
+import java.util.Scanner;
+
+public class Searchnum {
+
+	public static void main(String[] args) {
+		int result;
+		int flag=0;
+		Scanner scanner=new Scanner(System.in);
+		int number[] = new int[10];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < 10; i++) 
+        {
+            number[i] = scanner.nextInt();
+        }
+        System.out.println("Enter the number to search:");
+        int number1=scanner.nextInt();
+        for(int i=0;i<10;i++) {
+        	
+        
+        if(number[i]==number1) {
+        	flag=1;
+        	break;
+        }else
+        {
+        	flag=0;
+        }
+        }
+        if(flag==1) {
+        	System.out.println("Number is found");
+        }else
+        {
+        	System.out.println("Number not found");
+        }
+	}
+
+}

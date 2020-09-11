@@ -1,0 +1,47 @@
+//Middle elements in the string
+
+package com.day2;
+
+public class MiddleCharacter {
+	
+	 public static String middle(String str)
+	    {
+	        int position;
+	        int length;
+	        if (str.length() % 2 == 0)
+	        {
+	            position = str.length() / 2 - 1;
+	            length = 2;
+	        }
+	        else
+	        {
+	            position = str.length() / 2;
+	            length = 1;
+	        }
+	        return str.substring(position, position + length);
+	    }
+	}
+
+
+//...main
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day2.MiddleCharacter;
+
+public class Middlecharacters {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        System.out.print("Input a string: ");
+        String str = in.nextLine();
+        System.out.print("The middle character in the string: " );
+        String result=MiddleCharacter.middle(str);
+        System.out.println(result);
+
+	}
+
+	
+}

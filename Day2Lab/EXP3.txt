@@ -1,0 +1,37 @@
+//Count vowels in a string
+
+package com.day2;
+
+public class Vowels {
+       public static int stringvowel(String str) {
+    	   int count=0;
+    	   for(int i=0;i<str.length();i++) {
+    		   if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u') {
+    			   count++;
+    			
+    		   }
+    		   
+    	   }
+    	   System.out.println(count);
+		return 0;
+       }
+}
+
+////main
+package com.main;
+
+import java.util.Scanner;
+
+import com.day2.Vowels;
+
+public class Vowel {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the string:");
+		String str=scanner.nextLine();
+		int resultcount=Vowels.stringvowel(str);
+
+	}
+
+}

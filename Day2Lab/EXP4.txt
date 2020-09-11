@@ -1,0 +1,41 @@
+package com.day2;
+
+public class Roomdetails {
+	 private int roomNo;
+	 private String roomType;
+	 private float roomArea;
+	 boolean acMachine;
+
+	 public void setData(int roomNo, String roomType, float roomArea, boolean acMachine)
+	 {
+	 this.roomNo = roomNo;
+	 this.roomType = roomType;
+	 this.roomArea = roomArea;
+	 this.acMachine = acMachine;
+	 }
+	 public void displayData()
+	 {
+	 System.out.println("The room no is:" + roomNo);
+	 System.out.println("The room type is:" + roomType);
+	 System.out.println("The room area is:" + roomArea);
+	 System.out.println("The ac Machine is:" + acMachine );
+	 }	 
+ 
+}
+
+
+//main
+
+package com.main;
+
+import com.day2.Roomdetails;
+
+public class RoomDetail {
+	public static void main(String arg[]){
+		 Roomdetails room1 = new Roomdetails ( );
+		 room1.setData(12,"normal",200.0f,true);
+		 room1.displayData ( );
+		}
+
+	}
+

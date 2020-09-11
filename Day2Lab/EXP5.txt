@@ -1,0 +1,10 @@
+//Create class named as ‘a’ and create a sub class ‘b’. 
+Which is extends from class ‘a’. And use these classes in ‘inherit’ class
+
+class a{
+
+
+}
+class b extends class a{
+   //the class b inherits another class a
+}

@@ -1,0 +1,12 @@
+//Wrapper Class
+
+package com.sangee;
+
+import java.util.Scanner;
+
+public class WrapperDemo {
+		public static void main(String args[]){  
+		System.out.println("Your first argument is: "+args[0]);  
+		}    
+
+}

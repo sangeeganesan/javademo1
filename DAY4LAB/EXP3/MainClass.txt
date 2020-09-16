@@ -1,0 +1,49 @@
+package com.main;
+
+import java.util.Scanner;
+
+import com.day4lab.MembershipCard;
+import com.day4lab.PaybackCard;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		System.out.println("Select Card");
+		System.out.println("1.Payback Card");
+		System.out.println("2.Membership Card");
+		Scanner scanner=new Scanner(System.in);
+		int choice=scanner.nextInt();
+		switch(choice) {
+		case 1: 
+			System.out.println("Enter Card Details");
+			String holderName=scanner.nextLine();
+			String cardNumber=scanner.nextLine();
+			String expiryDate=scanner.nextLine();
+			System.out.println(holderName + "|"+cardNumber+"|"+expiryDate);
+			System.out.println("Enter points earned");
+			int pointsEarned=scanner.nextInt();
+			System.out.println("Enter Amount:");
+			double totalAmount=scanner.nextDouble();
+			PaybackCard PBC=new PaybackCard(holderName, cardNumber, expiryDate, pointsEarned, totalAmount);
+		    PBC.display();
+		    break;
+		case 2:
+			System.out.println("Enter Card Details");
+			String holderName1=scanner.nextLine();
+			String cardNumber1=scanner.nextLine();
+			String expiryDate1=scanner.nextLine();
+			System.out.println(holderName1 + "|"+cardNumber1+"|"+expiryDate1);
+			System.out.println("Enter rating");
+			int rating=scanner.nextInt();	
+			MembershipCard MC=new MembershipCard(holderName1,cardNumber1,expiryDate1, rating);
+			MC.display();
+			
+			
+		}
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.main;
+
+import day4lab.square;
+
+import java.util.Scanner;
+
+import day4lab.rectangle;
+
+public class Shapedetails {
+
+
+	public static void main(String[] args) {
+		System.out.println("Circle");
+		System.out.println("Square");
+		System.out.println("Rectangle");
+		
+		String Shapes;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the shape:");
+		Shapes=scanner.nextLine();
+		
+		switch(Shapes) {
+		case "Circle":
+			Shapes="Circle";
+			Circle c=new Circle(4,"Circle");
+		    c.calculateArea();
+		case "Square":
+			Shapes="Square";
+		    square sq=new square("square",4);
+		    sq.calculateArea();
+		    break;
+		case "Rectangle":
+			Shapes="Rectangle";
+		    rectangle rec=new rectangle("Rectangle",12,6);
+		    rec.calculateArea();
+		    break;
+
+	}
+	}
+}
+
+

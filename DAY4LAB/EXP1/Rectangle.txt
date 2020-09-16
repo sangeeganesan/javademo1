@@ -1,0 +1,43 @@
+package day4lab;
+
+import com.main.Shape;
+
+public class rectangle extends Shape{
+		private String name;
+		private int length;
+		private int breadth;
+		public rectangle(String name,int length,int breadth) {
+			super(name);
+			this.setName(name);
+			this.setLength(length);
+			this.setBreadth(breadth);
+			
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		
+		public int getLength() {
+			return length;
+		}
+		public void setLength(int length) {
+			this.length = length;
+		}
+		public int getBreadth() {
+			return breadth;
+		}
+		public void setBreadth(int breadth) {
+			this.breadth = breadth;
+		}
+		@Override
+		public float calculateArea() {
+			System.out.println("The area of rectangle:" +(length*breadth));
+			return 0;
+		}
+		
+
+	}
+

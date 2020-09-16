@@ -1,0 +1,28 @@
+package day4lab;
+
+import com.main.Shape;
+
+public class  square extends Shape{
+
+	private int side;
+
+	public square(String name,int side) {
+		super(name);
+		this.setSide(side);
+		
+	}
+	public int getSide() {
+		return side;
+	}
+
+	public void setSide(int side) {
+		this.side = side;
+	}
+	@Override
+	public float calculateArea() {
+		System.out.println("The area of square:" + (side*side));
+		return 0;
+	}
+	
+	
+}

@@ -1,0 +1,33 @@
+package com.main;
+
+import com.day4lab.A;
+
+public class OOPExercises {
+    public static void main(String[] args) {
+        A objA = new A();
+        System.out.println("in main(): ");
+        System.out.println("objA.a = "+objA.a);
+        objA.a = 222;
+    }
+}
+package com.day4lab;
+
+public class A {
+     int a = 100;
+    public void setA( int value) {
+        a = value;
+}
+    public int getA() {
+        return a;
+    }
+} //class A
+
+
+
+Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
+	The field A.a is not visible
+	The field A.a is not visible
+
+	at com.main.OOPExercises.main(OOPExercises.java:9)
+
+by changing int =100 to public then we can resolve the exception

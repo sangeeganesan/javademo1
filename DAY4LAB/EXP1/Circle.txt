@@ -1,0 +1,35 @@
+package com.main;
+
+public class Circle extends Shape {
+	  private int radius;
+    private String name;
+	  public Circle(int radius,String name) {
+	    super("Circle");
+	    this.setRadius(radius);
+	    this.setName(name);
+	    
+	  }
+
+	public int getRadius() {
+		return radius;
+	}
+
+	public void setRadius(int radius) {
+		this.radius = radius;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public float calculateArea() {
+		System.out.println("The area of circle is:"+ (3.14*radius*radius));
+		
+		return 0;
+	}
+
+}
+
+

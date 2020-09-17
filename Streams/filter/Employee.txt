@@ -1,0 +1,33 @@
+package com.main;
+
+public class Employee {
+	private String EmployeeName;
+	private int Employenumber;
+	private double salary;
+	public Employee(String employeeName, int employenumber, double salary) {
+		super();
+		EmployeeName = employeeName;
+		Employenumber = employenumber;
+		this.salary = salary;
+	}
+	public String getEmployeeName() {
+		return EmployeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		EmployeeName = employeeName;
+	}
+	public int getEmployenumber() {
+		return Employenumber;
+	}
+	public void setEmployenumber(int employenumber) {
+		Employenumber = employenumber;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+
+}

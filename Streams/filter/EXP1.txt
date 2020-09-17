@@ -1,0 +1,22 @@
+package com.main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StreamFilter {
+
+	public static void main(String[] args) {
+		List<Employee> ListOfEmployee=new ArrayList();
+		ListOfEmployee.add(new Employee("Nithesh",123,9000));
+		ListOfEmployee.add(new Employee("Raksh",124,11000));
+		ListOfEmployee.add(new Employee("Priya",125,5000));
+		ListOfEmployee.add(new Employee("Praveen",126,7000));
+		ListOfEmployee.add(new Employee("Subhu",127,5000));
+		
+		long Data=ListOfEmployee.stream().filter((c)->c.getEmployeeName().startsWith("R")).count();
+		System.out.println("How many employee start with c"+Data);
+
+	}
+
+}
+

@@ -1,0 +1,52 @@
+Inheritance:
+
+Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another. With the use of inheritance the information is made manageable in a hierarchical order.
+
+The class which inherits the properties of other is known as subclass (derived class, child class) and the class whose properties are inherited is known as superclass (base class, parent class).
+
+Super Class: The class whose features are inherited is known as super class(or a base class or a parent class).
+
+Sub Class: The class that inherits the other class is known as sub class(or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
+
+Reusability: Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class.
+
+Types of Inheritance in Java
+
+1.Single Inheritance : In single inheritance, subclasses inherit the features of one superclass. 
+                       In image below, the class A serves as a base class for the derived class B.
+2.Multilevel Inheritance : In Multilevel Inheritance, a derived class will be inheriting a base class and as well as the derived class also act as the base class to other class. In below image, the class A serves as a base class for the derived class B, which in turn serves as a base class for the derived class C. 
+                           In Java, a class cannot directly access the grandparent’s members
+3.Hierarchical Inheritance : In Hierarchical Inheritance, one class serves as a superclass (base class) for more than one sub class.In below image, the class A serves as a base class for the derived class B,C and D.
+
+***java doesn't multiple inheritance but we can achieve multiple inheritance in java through the concept of interface.
+
+Ex:
+package com.main
+class Calculation {
+   int z;
+	
+   public void addition(int x, int y) {
+      z = x + y;
+      System.out.println("The sum of the given numbers:"+z);
+   }
+	
+   public void Subtraction(int x, int y) {
+      z = x - y;
+      System.out.println("The difference between the given numbers:"+z);
+   }
+}
+
+public class My_Calculation extends Calculation {
+   public void multiplication(int x, int y) {
+      z = x * y;
+      System.out.println("The product of the given numbers:"+z);
+   }
+	
+   public static void main(String args[]) {
+      int a = 20, b = 10;
+      My_Calculation demo = new My_Calculation();
+      demo.addition(a, b);
+      demo.Subtraction(a, b);
+      demo.multiplication(a, b);
+   }
+}

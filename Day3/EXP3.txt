@@ -1,0 +1,54 @@
+package com.day3;
+
+public class Marks {
+	private int mark1;
+	private int mark2;
+	public Marks(int mark1, int mark2) {
+		super();
+		this.mark1 = mark1;
+		this.mark2 = mark2;
+	}
+	public int getMark1() {
+		return mark1;
+	}
+	public void setMark1(int mark1) {
+		this.mark1 = mark1;
+	}
+	public int getMark2() {
+		return mark2;
+	}
+	public void setMark2(int mark2) {
+		this.mark2 = mark2;
+	}
+	public void totalmark() {
+		System.out.println("TOTAL:" + (mark1 + mark2));
+	}
+	public void average() {
+		System.out.println("Average:" + ((mark1+mark2)/2));
+	}
+
+}
+
+
+
+//main
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day3.Marks;
+
+public class Mark {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter marks:");
+		int mark1=scanner.nextInt();
+		int mark2=scanner.nextInt();
+		Marks ma=new Marks(mark1,mark2);
+		ma.totalmark();
+		ma.average();
+	}
+
+}

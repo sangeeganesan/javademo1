@@ -1,0 +1,59 @@
+//calculator
+
+package com.day2;
+
+public class Calculator {
+	
+	public void add(int number1,int number2) {
+		System.out.println("The addition is:" + (number1+number2));
+	}
+	public void sub(int number1,int number2) {
+		System.out.println("The subtraction is:" + (number1-number2));
+		
+	}
+	public void Mul(int number1,int number2) {
+		System.out.println("The Multiplication is:" + (number1*number2));
+	}
+	public void div(int number1,int number2) {
+		System.out.println("The division is:" + (number1/number2));
+		
+	}
+	public void rem(int number1,int number2) {
+		System.out.println("The Remainder is:" + (number1%number2));
+		
+	}
+
+}
+
+
+//main
+
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day2.Calculator;
+
+public class Calci {
+
+	public static void main(String[] args) {
+		
+		int number1;
+		int number2;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("The number1 is:");
+		number1=scanner.nextInt();
+		
+		System.out.println("The number2 is:");
+		number2=scanner.nextInt();
+		Calculator cal=new Calculator();
+		cal.add(number1, number2);
+		cal.sub(number1, number2);
+		cal.Mul(number1, number2);
+		cal.div(number1, number2);
+		cal.rem(number1, number2);
+
+	}
+
+}

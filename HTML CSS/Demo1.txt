@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+<meta charset="ISO-88859-1">
+<title>Registration Page</title>
+</head>
+<body>
+<h1> Registration Page </h1>
+<form>
+<table>
+<div class="classtext">
+<tr>
+<td>Enter FirstName:</td>
+<td><input type="name" name="Firstname"></td>
+</tr>
+<tr>
+<td>Enter LastName:</td>
+<td><input type="name" name="Lastname"></td>
+</tr>
+<tr>
+<td>Gender :</td>    
+<td><input type="radio" value="Male" name="gender" checked > Male</td>   
+<td><input type="radio" value="Female" name="gender"> Female  </td>  
+</tr>
+<tr>
+<td>Enter Mailid:</td>
+<td><input type="name" name="Mailid"></td>
+</tr>
+<tr>
+<td>Course<td>
+<select>
+<option value="course">course</option>
+<option value="JAVA">JAVA</option>
+<option value="C">C</option>
+<option value="C++">C++</option>
+<option value="DataStructure">DataStructure</option>
+<option value="python">Python</option>
+</select>
+</tr>
+</div>
+<div class="alias">
+<tr>
+<td classtype><input type="button" name="submit" value="submit"></td>
+</tr>
+</div>
+</table>
+</form>
+</body>
+</html>

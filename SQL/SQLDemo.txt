@@ -1,0 +1,89 @@
+///mysql-assignment on customer related query
+
+
+CREATE TABLE customerdetail_master(
+CUSTOMER_NUMBER varchar(20),
+C varchar(50),
+middle_name varchar(40),
+last_name varchar(30),
+CUSTOMER_CITY varchar(15),
+CUSTOMER_CONTACT_NO varchar(10),
+occupation varchar(10),
+CUSTOMER_DATE_OF_BIRTH DATE,
+CONSTRAINT customer_custid_pk PRIMARY KEY (CUSTOMER_NUMBER));
+
+
+
+CREATE TABLE branch_master(
+branch_id varchar(6),
+branch_name varchar(30),
+branch_city varchar(30),
+CONSTRAINT branch_bid_pk PRIMARY KEY (branch_id));
+
+
+CREATE TABLE accountdetail
+(account_number varchar(25),
+customer_number varchar(25),
+branch_id varchar(255),
+opening_balance int,
+account_opening_date DATE,
+account_type varchar(25),
+account_status varchar(10),
+PRIMARY KEY (account_number),
+FOREIGN KEY (customer_number) references customerdetail_master(customer_number),
+FOREIGN KEY (branch_id) references branch_master(branch_id));
+
+
+CREATE TABLE transactiondetails(
+transaction_number varchar(6),
+account_number varchar(6),
+date_of_transaction DATE,
+medium_of_transaction varchar(20),
+transaction_type varchar(20),
+transaction_amount int,
+CONSTRAINT trans_details_tnumber_pk PRIMARY KEY (transaction_number),
+CONSTRAINT trans_details_acnumber_fk FOREIGN KEY (account_number)
+REFERENCES accountdetail (account_number));
+
+
+CREATE TABLE loan_details
+(customer_number varchar(255),
+branch_id varchar(255),
+loan_amount int,
+foreign key(customer_number) references customerdetail_master(customer_number));
+
+1)SELECT account_number,am.customer_number,FIRST_NAME,last_name,account_opening_date
+  FROM customerdetail_master cm INNER JOIN accountdetail am
+  ON cm.customer_number=am.customer_number
+  ORDER BY account_number;
+
+
+2)SELECT count(customer_number) Cust_Count 
+  FROM customerdetail_master
+  WHERE customer_city='CHENNAI';
+
+3)SELECT am.customer_number,FIRST_NAME, account_number
+  FROM customerdetail_master cm INNER JOIN accountdetail am
+  ON cm.customer_number=am.customer_number
+  WHERE extract(day from account_opening_date)>15
+  ORDER BY am.customer_number, account_number;
+
+4)SELECT count(customer_number) Count_Customer
+  FROM customerdetail_master
+  WHERE customer_number NOT IN (SELECT customer_number FROM accountdetail);
+
+5)select FIRST_NAME
+  FROM customerdetail_master cm INNER JOIN accountdetail am 
+  ON cm.customer_number=am.customer_number group by FIRST_NAME having count(account_number)>1
+  order by FIRST_NAME;
+
+6) SELECT count(id.customer_number) Count
+   FROM customer master cm INNER JOIN loan_detailsID
+   ON cc.customer number=Id.customer_number
+   WHERE cm.customer_number NOT IN ( SELECT customer_number FROM accountdetail);
+
+7)select FIRST_NAME
+  FROM customerdetail_master cm INNER JOIN accountdetail
+  ON customerdetail_master.customer_number=accountdetail.customer_number GROUP BY FIRST_NAME
+  having count(FIRST_NAME)>=2 order by firstname;
+

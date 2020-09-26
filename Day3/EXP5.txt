@@ -1,0 +1,78 @@
+package com.day3;
+
+import java.util.ArrayList;
+import java.io.*;
+
+public class Employee2 {
+	int id;
+	String name;
+	String desig;
+	static ArrayList al = new ArrayList();
+	static int count = 0; // to track the no. of employees
+
+	Employee2() {
+	}
+
+//constructor for initializing employee objects
+
+	Employee2(int id, String name, String desig) {
+		this.id = id;
+		this.name = name;
+		this.desig = desig;
+		count++;
+	}
+
+//method to store employees details in an arraylist
+
+	public void putDetails(Employee2 e1) {
+		al.add(e1);
+	}
+
+//method to retreive employee objects
+
+	public Employee2 getDetails(int id) {
+		Employee2 es = (Employee2) al.get(id);
+		return es;
+	}
+
+	public static void main(String[] args) throws IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		Employee2 e = new Employee2();
+		Employee2 e1 = new Employee2(1, "Sangee", "Fresher");
+		Employee2 e2 = new Employee2(2, "Ammu", "RM");
+		Employee2 e3 = new Employee2(3, "Vasu", "PM");
+
+		e.putDetails(e1);
+		e.putDetails(e2);
+		e.putDetails(e3);
+		;
+
+		System.out.println("The total number of employees are: " + count);
+		System.out.println(" ");
+
+		while (true) {
+			System.out.println("Enter employee id to get the employee details: ");
+			int id = Integer.parseInt(br.readLine());
+			boolean flag = false;
+
+			for (int i = 0; i < 3; i++) {
+				Employee2 es = e1.getDetails(i);
+				if (id == es.id) {
+					System.out.println("The details of the employee with id " + id + " is: ");
+					System.out.print(es.id + " " + es.name + " " + es.desig);
+					flag = true;
+					break;
+				}
+			}
+
+			System.out.println(" ");
+
+			if (!flag) {
+				System.out.println("Sorry, no data exists with the id " + id);
+			}
+			System.out.println(" ");
+		}
+	}
+}

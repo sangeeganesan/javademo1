@@ -1,0 +1,13 @@
+import java.util.Comparator;
+import java.util.stream.*;
+public class StreamMin{
+   public static void main(String args[]) {
+			 
+	//getting min number
+	Integer minnum = Stream.of(10, 13, 4, 9, 2, 100)
+	                    .min(Comparator.comparing(Integer::valueOf))
+	                    .get();
+		 
+	System.out.println("Min number is: " + minnum);
+   }
+}

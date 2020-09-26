@@ -1,0 +1,88 @@
+FUNCTION WITH ARGUMENT AND NO RETURN 
+package com.main
+public class Parameters {
+	int result, n;
+	public void square(int n) {
+		result=n*n;
+		System.out.println(result);
+	}
+
+	public static void main(String[] args) {
+     
+        Parameters Para=new Parameters();
+        Para.square(3);
+       
+    }
+
+}
+
+
+FUNCTION WITH NO ARGUMENT AND NO RETURN 
+
+
+public class Parameters {
+	int result;
+	int n = 3;
+
+	public void square() {
+		result = n * n;
+		System.out.println(result);
+	}
+
+	public static void main(String[] args) {
+
+		Parameters Para = new Parameters();
+		Para.square();
+
+	}
+
+}
+
+FUNCTION WITH NO ARGUMENT AND RETURN 
+package com.main
+import java.util.Scanner;
+
+public class Test
+{
+   public int areacircle()
+    {   
+        System.out.print("enter the radius :");
+        Scanner s = new Scanner(System.in);
+        float r = s.nextFloat();
+        int ar;
+        ar = (int) ((r * r) * 22 / 7);                  //r=radius
+        System.out.println("area of the circle is : "+ar+" sq units.");
+		return ar;
+    }
+
+    public static void main(String args[]) 
+    {
+        Test obj = new Test();
+        obj.areacircle();
+    }
+}
+
+FUNCTION WITH ARGUMENT AND RETURN 
+package com.main
+import java.util.Scanner;
+
+public class Test
+{
+   public int areacircle(int r)
+    {   
+        
+        int ar;
+        ar = ((r * r) * 22 / 7);
+        System.out.println("area of the circle is : "+ar+" sq units.");
+		return ar;
+    }
+
+    public static void main(String args[]) 
+    {
+        Test obj = new Test();
+        obj.areacircle(22);
+    }
+}
+
+
+

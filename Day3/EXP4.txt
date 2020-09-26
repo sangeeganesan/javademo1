@@ -1,0 +1,58 @@
+package com.day3;
+
+public class SalaryDemo {
+	private int empid;
+	private String empname;
+	private int salary;
+	public int getEmpid() {
+		return empid;
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public String getEmpname() {
+		return empname;
+	}
+	public void setEmpname(String empname) {
+		this.empname = empname;
+	}
+	public float getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public SalaryDemo(int empid, String empname, int salary) {
+		super();
+		this.empid = empid;
+		this.empname = empname;
+		this.salary = salary;
+	}
+    public void Salaryinc() {
+    	System.out.println(salary + 100);
+    	
+    }
+}
+
+
+
+package com.main;
+
+import java.util.Scanner;
+
+import com.day3.SalaryDemo;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		String empname=scanner.nextLine();
+		int empid=scanner.nextInt();
+	
+		int salary=scanner.nextInt();
+		
+		SalaryDemo SD=new SalaryDemo(empid, empname, salary);
+        SD.Salaryinc();
+	}
+
+}

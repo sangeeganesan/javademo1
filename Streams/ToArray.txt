@@ -1,0 +1,18 @@
+package com.main;
+
+import java.util.List;
+import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StreamMapToUppercaseDemo {
+	public static void main(String[] args) {
+
+		Stream<String> stream = Stream.of("sangee", "subhu", "Harini", "priya");
+
+		// Using Stream toArray()
+		Object[] arr = stream.toArray();
+
+		System.out.println(Arrays.toString(arr));
+	}
+}

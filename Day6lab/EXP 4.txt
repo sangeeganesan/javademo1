@@ -1,0 +1,29 @@
+package com.main;
+public class DemoThread1 extends Thread{
+
+	public void DemoThread1() {
+		Thread t1 = new Thread();
+		t1.start();
+
+	}
+
+	public void run() {
+		for (int counter = 0; counter <= 10; counter++) {
+			System.out.println("running child Thread in loop : " + counter);
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	public static void main(String[] args) {
+		DemoThread1 De = new DemoThread1();
+		De.run();
+
+	}
+
+}

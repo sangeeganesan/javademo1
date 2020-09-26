@@ -1,0 +1,62 @@
+
+public abstract class Number implements Runnable {
+	static Runnable r1 = new Runnable() {
+		@Override
+		public void run() {
+			System.out.println("Thread Started");
+			for (int i = 1; i <= 10; i++) {
+				System.out.print("  " + i * 2);
+
+			}
+			System.out.println("  ");
+			System.out.println("Terminated");
+		}
+	};
+
+	static Runnable r2 = new Runnable() {
+		public void run() {
+			System.out.println("Thread Started");
+			for (int i = 1; i <= 10; i++) {
+				System.out.print("  " + i * 5);
+			}
+			System.out.println("  ");
+			System.out.println("Terminated");
+		}
+
+	};
+	static Runnable r3 = new Runnable() {
+		public void run() {
+			System.out.println("Thread Started");
+			for (int i = 1; i <= 10; i++) {
+				System.out.print("  " + i * 8);
+			}
+			System.out.println("  ");
+			System.out.println("Terminated");
+		}
+
+	};
+
+	public static void main(String[] args) {
+		Thread t1 = new Thread(r1);
+		t1.start();
+		try {
+			t1.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		Thread t2 = new Thread(r2);
+		t2.start();
+		try {
+			t2.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Thread t3 = new Thread(r3);
+		t3.start();
+
+	}
+
+}

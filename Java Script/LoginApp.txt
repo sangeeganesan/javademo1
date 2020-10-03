@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="Logincs.css">
+<script type="text/javascript">
+function Uservalidation(){
+	var x=document.getElementById("userid").value;
+	
+	if(x.length<5){
+		alert("Userid must be minimum of 5 digits")
+	}
+}
+function pwdvalidation(){
+	var password=document.act1.password.value;
+	if(password.length<5)
+		{
+		alert("Password must be greater than 5 characters")
+		}
+
+}
+function agevalidate(){
+	var Age=document.getElementById("Age").value;
+	if(Age<18 || Age>58)
+		{
+		alert("Age must be between 18 and 58")
+		}
+}
+function success(){
+	alert("Login Success")
+	document.write("welcome")
+}
+</script>
+<title>Registration Page</title>
+</head>
+<body>
+ <form name="act1" onsubmit=" "> 
+ <h1>Registration Page</h1>
+ <div class="classnew">
+ <table>
+ <tr>
+ <td>Enter UserID</td>
+ <td><input type="number"  id="userid" onchange="Uservalidation()"></td>
+ </tr>
+ <tr>
+ <td>Enter Password</td>
+ <td><input type="password" id="password"" onchange="pwdvalidation()"></td>
+ </tr>
+ <tr>
+ <td>Enter MailID</td>
+ <td><input type="email" name="mailid"></td>
+ </tr>
+ <tr>
+ <td>Enter Age</td>
+ <td><input type="number" id="Age" Onchange="agevalidate()" ></td>
+ </tr>
+ <tr>
+ <td> </td>
+ <td> <input type="button" value="submit" onclick="success()"></td>
+ </tr>
+ </table>
+ </div>
+ </form>
+</body>
+</html>

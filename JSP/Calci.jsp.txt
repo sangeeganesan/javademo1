@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+	 <%
+            if(request.getParameter("button") != null) {
+        %>
+        <% String s = request.getParameter("button");
+           int number1,number2;
+           if(request.getParameter("number1").equals("")) { number1 = 0; } else number1 = Integer.valueOf(request.getParameter("number1"));
+           if(request.getParameter("number2").equals("")) { number2 = 0; } else number2 = Integer.valueOf(request.getParameter("number2"));
+           if (s.equals("ADD")) {
+               out.println("Result is " + (number1 + number2));
+           }
+           else if (s.equals("SUB")) {
+               out.println("Result is " + (number1-number2));
+           }
+           else if(s.equals("MUL")) {
+               out.println("Result is " + (number1*number2));
+           }
+           else if(s.equals("DIV")) {
+               out.println("Result is " + (number1/number2));
+           }
+       
+        %>
+        <%
+            }
+        %>
+</body>
+</html>

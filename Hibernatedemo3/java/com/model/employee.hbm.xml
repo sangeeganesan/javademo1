@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+          "http://www.hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">               
+<hibernate-mapping>
+     <class name="com.model.Employee" table="tablename">
+         <id name="empNo" column="empnumber" length="5">
+             <generator class="increment"></generator>       
+         </id>
+         <property name="empName" column="ename" length="15"></property>
+         <property name="salary" length="5"></property>
+     </class>
+     <sql-query name="SQLallrecord">
+           <![CDATA[select empnumber, ename, salary from tablename]]>
+     </sql-query>
+</hibernate-mapping>
+          
